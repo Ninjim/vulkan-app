@@ -1,364 +1,130 @@
 obj/engine/src/core/vulkan_command_buffer.c.o: \
-  engine\src\core\vulkan_command_buffer.c \
-  engine\src\core\vulkan_command_buffer.h \
-  engine\src\core\vulkan_types.inl engine\src\defines.h \
-  engine\src\core\..\include\glfw\include\GLFW\glfw3.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\stddef.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\stddef.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_header_macro.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_ptrdiff_t.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_size_t.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_wchar_t.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_null.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_max_align_t.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_offsetof.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\stdint.h \
-  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdint.h \
-  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime.h \
-  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\sal.h \
-  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\concurrencysal.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\vadefs.h \
-  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vadefs.h \
-  C:\VulkanSDK\1.4.309.0\include\vulkan\vulkan.h \
-  C:\VulkanSDK\1.4.309.0\include\vulkan\vk_platform.h \
-  C:\VulkanSDK\1.4.309.0\include\vulkan\vulkan_core.h \
-  C:\VulkanSDK\1.4.309.0\include\vk_video\vulkan_video_codec_h264std.h \
-  C:\VulkanSDK\1.4.309.0\include\vk_video\vulkan_video_codecs_common.h \
-  C:\VulkanSDK\1.4.309.0\include\vk_video\vulkan_video_codec_h264std_encode.h \
-  C:\VulkanSDK\1.4.309.0\include\vk_video\vulkan_video_codec_h265std.h \
-  C:\VulkanSDK\1.4.309.0\include\vk_video\vulkan_video_codec_h265std_encode.h \
-  C:\VulkanSDK\1.4.309.0\include\vk_video\vulkan_video_codec_h264std_decode.h \
-  C:\VulkanSDK\1.4.309.0\include\vk_video\vulkan_video_codec_h265std_decode.h \
-  C:\VulkanSDK\1.4.309.0\include\vk_video\vulkan_video_codec_av1std.h \
-  C:\VulkanSDK\1.4.309.0\include\vk_video\vulkan_video_codec_av1std_decode.h \
-  C:\VulkanSDK\1.4.309.0\include\vk_video\vulkan_video_codec_av1std_encode.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\GL\gl.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\winapifamily.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\winpackagefamily.h \
-  engine\src\core\vulkan_utils.h engine\src\core\asserts.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\intrin0.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\adcintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\x86intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\ia32intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\immintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\x86gprintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\hresetintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\uintrintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\usermsrintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\crc32intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\prfchiintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\raointintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\cmpccxaddintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\mmintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\xmmintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\mm_malloc.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\stdlib.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_malloc.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_search.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_wstdlib.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\limits.h \
-  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\limits.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\malloc.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\emmintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\pmmintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\tmmintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\smmintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\popcntintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\wmmintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\__wmmintrin_aes.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\__wmmintrin_pclmul.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\clflushoptintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\clwbintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avxintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx2intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\f16cintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\bmiintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\bmi2intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\lzcntintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\fmaintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512fintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512vlintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512bwintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512bitalgintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512cdintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512vpopcntdqintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512vpopcntdqvlintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512vnniintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512vlvnniintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avxvnniintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512dqintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512vlbitalgintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512vlbwintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512vlcdintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512vldqintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512ifmaintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512ifmavlintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avxifmaintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512vbmiintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512vbmivlintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512vbmi2intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512vlvbmi2intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512fp16intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512vlfp16intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512bf16intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512vlbf16intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\pkuintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\vpclmulqdqintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\vaesintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\gfniintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avxvnniint8intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avxneconvertintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\sha512intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\sm3intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\sm4intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avxvnniint16intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\rtmintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\xtestintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\shaintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\fxsrintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\xsaveintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\xsaveoptintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\xsavecintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\xsavesintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\cetintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\adxintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\rdseedintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\wbnoinvdintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\cldemoteintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\waitpkgintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\movdirintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\movrsintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\movrs_avx10_2intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\movrs_avx10_2_512intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\pconfigintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\sgxintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\ptwriteintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\invpcidintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\keylockerintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\amxintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\amxfp16intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\amxcomplexintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\amxfp8intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\amxtransposeintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\amxmovrsintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\amxmovrstransposeintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\amxavx512intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\amxtf32intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\amxtf32transposeintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\amxbf16transposeintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\amxfp16transposeintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\amxcomplextransposeintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512vp2intersectintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx512vlvp2intersectintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2bf16intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2convertintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2copyintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2minmaxintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2niintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2satcvtdsintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2satcvtintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2_512bf16intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2_512convertintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2_512minmaxintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2_512niintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2_512satcvtdsintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2_512satcvtintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\sm4evexintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\enqcmdintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\serializeintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\tsxldtrkintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\prfchwintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\ammintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\fma4intrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\xopintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\tbmintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\lwpintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\mwaitxintrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\clzerointrin.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\rdpruintrin.h \
-  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\setjmp.h \
-  engine\src\container\darray.h
-engine\src\core\vulkan_command_buffer.h:
-engine\src\core\vulkan_types.inl:
-engine\src\defines.h:
-engine\src\core\..\include\glfw\include\GLFW\glfw3.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\stddef.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\stddef.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_header_macro.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_ptrdiff_t.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_size_t.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_wchar_t.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_null.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_max_align_t.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_offsetof.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\stdint.h:
-C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdint.h:
-C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime.h:
-C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\sal.h:
-C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\concurrencysal.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\vadefs.h:
-C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vadefs.h:
-C:\VulkanSDK\1.4.309.0\include\vulkan\vulkan.h:
-C:\VulkanSDK\1.4.309.0\include\vulkan\vk_platform.h:
-C:\VulkanSDK\1.4.309.0\include\vulkan\vulkan_core.h:
-C:\VulkanSDK\1.4.309.0\include\vk_video\vulkan_video_codec_h264std.h:
-C:\VulkanSDK\1.4.309.0\include\vk_video\vulkan_video_codecs_common.h:
-C:\VulkanSDK\1.4.309.0\include\vk_video\vulkan_video_codec_h264std_encode.h:
-C:\VulkanSDK\1.4.309.0\include\vk_video\vulkan_video_codec_h265std.h:
-C:\VulkanSDK\1.4.309.0\include\vk_video\vulkan_video_codec_h265std_encode.h:
-C:\VulkanSDK\1.4.309.0\include\vk_video\vulkan_video_codec_h264std_decode.h:
-C:\VulkanSDK\1.4.309.0\include\vk_video\vulkan_video_codec_h265std_decode.h:
-C:\VulkanSDK\1.4.309.0\include\vk_video\vulkan_video_codec_av1std.h:
-C:\VulkanSDK\1.4.309.0\include\vk_video\vulkan_video_codec_av1std_decode.h:
-C:\VulkanSDK\1.4.309.0\include\vk_video\vulkan_video_codec_av1std_encode.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\GL\gl.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\winapifamily.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\winpackagefamily.h:
-engine\src\core\vulkan_utils.h:
-engine\src\core\asserts.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\intrin0.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\adcintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\x86intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\ia32intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\immintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\x86gprintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\hresetintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\uintrintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\usermsrintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\crc32intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\prfchiintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\raointintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\cmpccxaddintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\mmintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\xmmintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\mm_malloc.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\stdlib.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_malloc.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_search.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_wstdlib.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\limits.h:
-C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\limits.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\malloc.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\emmintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\pmmintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\tmmintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\smmintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\popcntintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\wmmintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\__wmmintrin_aes.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\__wmmintrin_pclmul.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\clflushoptintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\clwbintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avxintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx2intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\f16cintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\bmiintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\bmi2intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\lzcntintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\fmaintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512fintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512vlintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512bwintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512bitalgintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512cdintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512vpopcntdqintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512vpopcntdqvlintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512vnniintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512vlvnniintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avxvnniintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512dqintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512vlbitalgintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512vlbwintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512vlcdintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512vldqintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512ifmaintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512ifmavlintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avxifmaintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512vbmiintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512vbmivlintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512vbmi2intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512vlvbmi2intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512fp16intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512vlfp16intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512bf16intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512vlbf16intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\pkuintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\vpclmulqdqintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\vaesintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\gfniintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avxvnniint8intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avxneconvertintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\sha512intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\sm3intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\sm4intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avxvnniint16intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\rtmintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\xtestintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\shaintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\fxsrintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\xsaveintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\xsaveoptintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\xsavecintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\xsavesintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\cetintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\adxintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\rdseedintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\wbnoinvdintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\cldemoteintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\waitpkgintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\movdirintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\movrsintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\movrs_avx10_2intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\movrs_avx10_2_512intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\pconfigintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\sgxintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\ptwriteintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\invpcidintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\keylockerintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\amxintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\amxfp16intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\amxcomplexintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\amxfp8intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\amxtransposeintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\amxmovrsintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\amxmovrstransposeintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\amxavx512intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\amxtf32intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\amxtf32transposeintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\amxbf16transposeintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\amxfp16transposeintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\amxcomplextransposeintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512vp2intersectintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx512vlvp2intersectintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2bf16intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2convertintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2copyintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2minmaxintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2niintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2satcvtdsintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2satcvtintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2_512bf16intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2_512convertintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2_512minmaxintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2_512niintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2_512satcvtdsintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\avx10_2_512satcvtintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\sm4evexintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\enqcmdintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\serializeintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\tsxldtrkintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\prfchwintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\ammintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\fma4intrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\xopintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\tbmintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\lwpintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\mwaitxintrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\clzerointrin.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\rdpruintrin.h:
-C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\setjmp.h:
-engine\src\container\darray.h:
+  engine/src/core/vulkan_command_buffer.c \
+  engine/src/core/vulkan_command_buffer.h \
+  engine/src/core/vulkan_types.inl engine/src/defines.h \
+  /usr/include/wayland-client.h /usr/include/wayland-client-core.h \
+  /usr/lib/clang/19/include/stdint.h /usr/include/stdint.h \
+  /usr/include/bits/libc-header-start.h /usr/include/features.h \
+  /usr/include/features-time64.h /usr/include/bits/wordsize.h \
+  /usr/include/bits/timesize.h /usr/include/stdc-predef.h \
+  /usr/include/sys/cdefs.h /usr/include/bits/long-double.h \
+  /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
+  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+  /usr/include/bits/time64.h /usr/include/bits/wchar.h \
+  /usr/include/bits/stdint-intn.h /usr/include/bits/stdint-uintn.h \
+  /usr/include/bits/stdint-least.h /usr/include/wayland-util.h \
+  /usr/include/math.h /usr/include/bits/math-vector.h \
+  /usr/include/bits/libm-simd-decl-stubs.h /usr/include/bits/floatn.h \
+  /usr/include/bits/floatn-common.h /usr/include/bits/flt-eval-method.h \
+  /usr/include/bits/fp-logb.h /usr/include/bits/fp-fast.h \
+  /usr/include/bits/mathcalls-macros.h \
+  /usr/include/bits/mathcalls-helper-functions.h \
+  /usr/include/bits/mathcalls.h /usr/lib/clang/19/include/stddef.h \
+  /usr/lib/clang/19/include/__stddef_header_macro.h \
+  /usr/lib/clang/19/include/__stddef_ptrdiff_t.h \
+  /usr/lib/clang/19/include/__stddef_size_t.h \
+  /usr/lib/clang/19/include/__stddef_wchar_t.h \
+  /usr/lib/clang/19/include/__stddef_null.h \
+  /usr/lib/clang/19/include/__stddef_max_align_t.h \
+  /usr/lib/clang/19/include/__stddef_offsetof.h \
+  /usr/lib/clang/19/include/inttypes.h /usr/include/inttypes.h \
+  /usr/lib/clang/19/include/stdarg.h \
+  /usr/lib/clang/19/include/__stdarg_header_macro.h \
+  /usr/lib/clang/19/include/__stdarg___gnuc_va_list.h \
+  /usr/lib/clang/19/include/__stdarg_va_list.h \
+  /usr/lib/clang/19/include/__stdarg_va_arg.h \
+  /usr/lib/clang/19/include/__stdarg___va_copy.h \
+  /usr/lib/clang/19/include/__stdarg_va_copy.h \
+  /usr/include/wayland-version.h /usr/include/wayland-client-protocol.h \
+  engine/src/core/xdg-shell-client-protocol.h \
+  engine/src/core/vulkan_utils.h engine/src/core/asserts.h \
+  /usr/include/vulkan/vulkan.h /usr/include/vulkan/vk_platform.h \
+  /usr/include/vulkan/vulkan_core.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std.h \
+  /usr/include/vk_video/vulkan_video_codecs_common.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_encode.h \
+  /usr/include/vk_video/vulkan_video_codec_h264std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_h265std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_decode.h \
+  /usr/include/vk_video/vulkan_video_codec_av1std_encode.h \
+  /usr/include/GLFW/glfw3.h /usr/include/GL/gl.h /usr/include/GL/glext.h \
+  /usr/include/KHR/khrplatform.h engine/src/container/darray.h
+engine/src/core/vulkan_command_buffer.h:
+engine/src/core/vulkan_types.inl:
+engine/src/defines.h:
+/usr/include/wayland-client.h:
+/usr/include/wayland-client-core.h:
+/usr/lib/clang/19/include/stdint.h:
+/usr/include/stdint.h:
+/usr/include/bits/libc-header-start.h:
+/usr/include/features.h:
+/usr/include/features-time64.h:
+/usr/include/bits/wordsize.h:
+/usr/include/bits/timesize.h:
+/usr/include/stdc-predef.h:
+/usr/include/sys/cdefs.h:
+/usr/include/bits/long-double.h:
+/usr/include/gnu/stubs.h:
+/usr/include/gnu/stubs-64.h:
+/usr/include/bits/types.h:
+/usr/include/bits/typesizes.h:
+/usr/include/bits/time64.h:
+/usr/include/bits/wchar.h:
+/usr/include/bits/stdint-intn.h:
+/usr/include/bits/stdint-uintn.h:
+/usr/include/bits/stdint-least.h:
+/usr/include/wayland-util.h:
+/usr/include/math.h:
+/usr/include/bits/math-vector.h:
+/usr/include/bits/libm-simd-decl-stubs.h:
+/usr/include/bits/floatn.h:
+/usr/include/bits/floatn-common.h:
+/usr/include/bits/flt-eval-method.h:
+/usr/include/bits/fp-logb.h:
+/usr/include/bits/fp-fast.h:
+/usr/include/bits/mathcalls-macros.h:
+/usr/include/bits/mathcalls-helper-functions.h:
+/usr/include/bits/mathcalls.h:
+/usr/lib/clang/19/include/stddef.h:
+/usr/lib/clang/19/include/__stddef_header_macro.h:
+/usr/lib/clang/19/include/__stddef_ptrdiff_t.h:
+/usr/lib/clang/19/include/__stddef_size_t.h:
+/usr/lib/clang/19/include/__stddef_wchar_t.h:
+/usr/lib/clang/19/include/__stddef_null.h:
+/usr/lib/clang/19/include/__stddef_max_align_t.h:
+/usr/lib/clang/19/include/__stddef_offsetof.h:
+/usr/lib/clang/19/include/inttypes.h:
+/usr/include/inttypes.h:
+/usr/lib/clang/19/include/stdarg.h:
+/usr/lib/clang/19/include/__stdarg_header_macro.h:
+/usr/lib/clang/19/include/__stdarg___gnuc_va_list.h:
+/usr/lib/clang/19/include/__stdarg_va_list.h:
+/usr/lib/clang/19/include/__stdarg_va_arg.h:
+/usr/lib/clang/19/include/__stdarg___va_copy.h:
+/usr/lib/clang/19/include/__stdarg_va_copy.h:
+/usr/include/wayland-version.h:
+/usr/include/wayland-client-protocol.h:
+engine/src/core/xdg-shell-client-protocol.h:
+engine/src/core/vulkan_utils.h:
+engine/src/core/asserts.h:
+/usr/include/vulkan/vulkan.h:
+/usr/include/vulkan/vk_platform.h:
+/usr/include/vulkan/vulkan_core.h:
+/usr/include/vk_video/vulkan_video_codec_h264std.h:
+/usr/include/vk_video/vulkan_video_codecs_common.h:
+/usr/include/vk_video/vulkan_video_codec_h264std_encode.h:
+/usr/include/vk_video/vulkan_video_codec_h265std.h:
+/usr/include/vk_video/vulkan_video_codec_h265std_encode.h:
+/usr/include/vk_video/vulkan_video_codec_h264std_decode.h:
+/usr/include/vk_video/vulkan_video_codec_h265std_decode.h:
+/usr/include/vk_video/vulkan_video_codec_av1std.h:
+/usr/include/vk_video/vulkan_video_codec_av1std_decode.h:
+/usr/include/vk_video/vulkan_video_codec_av1std_encode.h:
+/usr/include/GLFW/glfw3.h:
+/usr/include/GL/gl.h:
+/usr/include/GL/glext.h:
+/usr/include/KHR/khrplatform.h:
+engine/src/container/darray.h:

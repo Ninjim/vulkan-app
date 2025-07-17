@@ -9,7 +9,7 @@ DEP_DIR := dep
 ASSEMBLY := engine
 EXTENSION := .exe
 COMPILER_FLAGS := -g -fdeclspec -MP -MD -MF  #-fPIC for linux, vla is variable length arrays
-INCLUDE_FLAGS := -Iengine\src -I$(VULKAN_SDK)\include -Iengine\vendor\GLFW\include
+INCLUDE_FLAGS := -Iengine\src -I$(VULKAN_SDK)\include -I{ASSEMBLY}\src\include
 LINKER_FLAGS := -g -lgdi32 -luser32 -lshell32 -lopengl32 -lvulkan-1 -L$(VULKAN_SDK)\Lib -L$(OBJ_DIR)\engine # idk why this is included I'll see if I can remove it?
 DEFINES := -D_DEBUG -D_GLFW_WIN32 -DKEXPORT -D_CRT_SECURE_NO_WARNINGS
 

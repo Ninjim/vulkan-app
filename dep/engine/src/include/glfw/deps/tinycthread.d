@@ -1,258 +1,184 @@
 obj/engine/src/include/glfw/deps/tinycthread.c.o: \
-  engine\src\include\glfw\deps\tinycthread.c \
-  engine\src\include\glfw\deps\tinycthread.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\time.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt.h \
-  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime.h \
-  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\sal.h \
-  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\concurrencysal.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\vadefs.h \
-  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vadefs.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_wtime.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\windows.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\winapifamily.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\winpackagefamily.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\sdkddkver.h \
-  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\excpt.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\stdarg.h \
-  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdarg.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\__stdarg_header_macro.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\__stdarg___gnuc_va_list.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\__stdarg_va_list.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\__stdarg_va_arg.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\__stdarg___va_copy.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\__stdarg_va_copy.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\windef.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\minwindef.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\specstrings.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\specstrings_strict.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\specstrings_undef.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\driverspecs.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\sdv_driverspecs.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\winnt.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\ctype.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_wctype.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\kernelspecs.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\basetsd.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\guiddef.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\string.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_memory.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_memcpy_s.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\errno.h \
-  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_string.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_wstring.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\pshpack4.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\poppack.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\pshpack2.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\pshpack8.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\pshpack1.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\apiset.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\ktmtypes.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\winbase.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\apisetcconv.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\minwinbase.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\apiquery2.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\processenv.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\fileapifromapp.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\fileapi.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\debugapi.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\utilapiset.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\handleapi.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\errhandlingapi.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\fibersapi.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\namedpipeapi.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\profileapi.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\heapapi.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\ioapiset.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\synchapi.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\interlockedapi.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\processthreadsapi.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\sysinfoapi.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\memoryapi.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\enclaveapi.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\threadpoollegacyapiset.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\threadpoolapiset.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\jobapi.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\jobapi2.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\wow64apiset.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\libloaderapi.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\securitybaseapi.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\namespaceapi.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\systemtopologyapi.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\processtopologyapi.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\securityappcontainer.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\realtimeapiset.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\winerror.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\timezoneapi.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\wingdi.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\winuser.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\tvout.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\winnls.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\datetimeapi.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\stringapiset.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\wincon.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\wincontypes.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\consoleapi.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\consoleapi2.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\consoleapi3.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\winver.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\verrsrc.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\winreg.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\reason.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\winnetwk.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\wnnc.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\stralign.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\winsvc.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\mcx.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\imm.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\ime_cmodes.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\stdlib.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_malloc.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_search.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\stddef.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\stddef.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_header_macro.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_ptrdiff_t.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_size_t.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_wchar_t.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_null.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_max_align_t.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_offsetof.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_wstdlib.h \
-  C:\Program\ Files\LLVM\lib\clang\20\include\limits.h \
-  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\limits.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\process.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_startup.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\math.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h \
-  C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_startup.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_wprocess.h \
-  C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\sys\timeb.h
-engine\src\include\glfw\deps\tinycthread.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\time.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt.h:
-C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime.h:
-C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\sal.h:
-C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\concurrencysal.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\vadefs.h:
-C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vadefs.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_wtime.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\windows.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\winapifamily.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\winpackagefamily.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\sdkddkver.h:
-C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\excpt.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\stdarg.h:
-C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\stdarg.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\__stdarg_header_macro.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\__stdarg___gnuc_va_list.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\__stdarg_va_list.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\__stdarg_va_arg.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\__stdarg___va_copy.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\__stdarg_va_copy.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\windef.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\minwindef.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\specstrings.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\specstrings_strict.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\specstrings_undef.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\driverspecs.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\sdv_driverspecs.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\winnt.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\ctype.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_wctype.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\kernelspecs.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\basetsd.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\guiddef.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\string.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_memory.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_memcpy_s.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\errno.h:
-C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_string.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_wstring.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\pshpack4.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\poppack.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\pshpack2.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\pshpack8.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\pshpack1.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\apiset.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\ktmtypes.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\winbase.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\apisetcconv.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\minwinbase.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\apiquery2.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\processenv.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\fileapifromapp.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\fileapi.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\debugapi.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\utilapiset.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\handleapi.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\errhandlingapi.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\fibersapi.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\namedpipeapi.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\profileapi.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\heapapi.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\ioapiset.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\synchapi.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\interlockedapi.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\processthreadsapi.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\sysinfoapi.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\memoryapi.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\enclaveapi.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\threadpoollegacyapiset.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\threadpoolapiset.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\jobapi.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\jobapi2.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\wow64apiset.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\libloaderapi.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\securitybaseapi.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\namespaceapi.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\systemtopologyapi.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\processtopologyapi.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\securityappcontainer.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\realtimeapiset.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\winerror.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\timezoneapi.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\wingdi.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\winuser.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\tvout.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\winnls.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\datetimeapi.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\stringapiset.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\wincon.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\wincontypes.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\consoleapi.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\consoleapi2.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\consoleapi3.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\winver.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\verrsrc.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\winreg.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\reason.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\winnetwk.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\wnnc.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\shared\stralign.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\winsvc.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\mcx.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\imm.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\um\ime_cmodes.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\stdlib.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_malloc.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_search.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\stddef.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\stddef.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_header_macro.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_ptrdiff_t.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_size_t.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_wchar_t.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_null.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_max_align_t.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\__stddef_offsetof.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_wstdlib.h:
-C:\Program\ Files\LLVM\lib\clang\20\include\limits.h:
-C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\limits.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\process.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_startup.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\math.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h:
-C:\Program\ Files\Microsoft\ Visual\ Studio\2022\Community\VC\Tools\MSVC\14.43.34808\include\vcruntime_startup.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\corecrt_wprocess.h:
-C:\Program\ Files\ (x86)\Windows\ Kits\10\Include\10.0.22621.0\ucrt\sys\timeb.h:
+  engine/src/include/glfw/deps/tinycthread.c \
+  engine/src/include/glfw/deps/tinycthread.h /usr/include/time.h \
+  /usr/include/features.h /usr/include/features-time64.h \
+  /usr/include/bits/wordsize.h /usr/include/bits/timesize.h \
+  /usr/include/stdc-predef.h /usr/include/sys/cdefs.h \
+  /usr/include/bits/long-double.h /usr/include/gnu/stubs.h \
+  /usr/include/gnu/stubs-64.h /usr/lib/clang/19/include/stddef.h \
+  /usr/lib/clang/19/include/__stddef_size_t.h \
+  /usr/lib/clang/19/include/__stddef_null.h /usr/include/bits/time.h \
+  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
+  /usr/include/bits/time64.h /usr/include/bits/timex.h \
+  /usr/include/bits/types/struct_timeval.h \
+  /usr/include/bits/types/clock_t.h /usr/include/bits/types/time_t.h \
+  /usr/include/bits/types/struct_tm.h \
+  /usr/include/bits/types/struct_timespec.h /usr/include/bits/endian.h \
+  /usr/include/bits/endianness.h /usr/include/bits/types/clockid_t.h \
+  /usr/include/bits/types/timer_t.h \
+  /usr/include/bits/types/struct_itimerspec.h \
+  /usr/include/bits/types/locale_t.h \
+  /usr/include/bits/types/__locale_t.h /usr/include/sys/time.h \
+  /usr/include/sys/select.h /usr/include/bits/select.h \
+  /usr/include/bits/types/sigset_t.h \
+  /usr/include/bits/types/__sigset_t.h /usr/include/pthread.h \
+  /usr/include/sched.h /usr/include/bits/sched.h \
+  /usr/include/linux/sched/types.h /usr/include/linux/types.h \
+  /usr/include/asm/types.h /usr/include/asm-generic/types.h \
+  /usr/include/asm-generic/int-ll64.h /usr/include/asm/bitsperlong.h \
+  /usr/include/asm-generic/bitsperlong.h \
+  /usr/include/linux/posix_types.h /usr/include/linux/stddef.h \
+  /usr/include/asm/posix_types.h /usr/include/asm/posix_types_64.h \
+  /usr/include/asm-generic/posix_types.h \
+  /usr/include/bits/types/struct_sched_param.h \
+  /usr/include/bits/cpu-set.h /usr/include/bits/pthreadtypes.h \
+  /usr/include/bits/thread-shared-types.h \
+  /usr/include/bits/pthreadtypes-arch.h \
+  /usr/include/bits/atomic_wide_counter.h \
+  /usr/include/bits/struct_mutex.h /usr/include/bits/struct_rwlock.h \
+  /usr/include/bits/setjmp.h \
+  /usr/include/bits/types/struct___jmp_buf_tag.h \
+  /usr/include/bits/pthread_stack_min-dynamic.h /usr/include/stdlib.h \
+  /usr/include/bits/libc-header-start.h \
+  /usr/lib/clang/19/include/__stddef_wchar_t.h \
+  /usr/include/bits/waitflags.h /usr/include/bits/waitstatus.h \
+  /usr/include/bits/floatn.h /usr/include/bits/floatn-common.h \
+  /usr/include/sys/types.h /usr/include/bits/stdint-intn.h \
+  /usr/include/endian.h /usr/include/bits/byteswap.h \
+  /usr/include/bits/uintn-identity.h /usr/include/alloca.h \
+  /usr/include/bits/stdlib-float.h /usr/include/signal.h \
+  /usr/include/bits/signum-generic.h /usr/include/bits/signum-arch.h \
+  /usr/include/bits/types/sig_atomic_t.h \
+  /usr/include/bits/types/siginfo_t.h \
+  /usr/include/bits/types/__sigval_t.h /usr/include/bits/siginfo-arch.h \
+  /usr/include/bits/siginfo-consts.h \
+  /usr/include/bits/siginfo-consts-arch.h \
+  /usr/include/bits/types/sigval_t.h \
+  /usr/include/bits/types/sigevent_t.h \
+  /usr/include/bits/sigevent-consts.h /usr/include/bits/sigaction.h \
+  /usr/include/bits/sigcontext.h /usr/include/bits/types/stack_t.h \
+  /usr/include/sys/ucontext.h /usr/include/bits/sigstack.h \
+  /usr/include/bits/sigstksz.h /usr/include/unistd.h \
+  /usr/include/bits/posix_opt.h /usr/include/bits/environments.h \
+  /usr/include/bits/confname.h /usr/include/bits/getopt_posix.h \
+  /usr/include/bits/getopt_core.h /usr/include/bits/unistd_ext.h \
+  /usr/include/linux/close_range.h /usr/include/bits/ss_flags.h \
+  /usr/include/bits/types/struct_sigstack.h \
+  /usr/include/bits/sigthread.h /usr/include/bits/signal_ext.h \
+  /usr/include/errno.h /usr/include/bits/errno.h \
+  /usr/include/linux/errno.h /usr/include/asm/errno.h \
+  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+  /usr/include/bits/types/error_t.h
+engine/src/include/glfw/deps/tinycthread.h:
+/usr/include/time.h:
+/usr/include/features.h:
+/usr/include/features-time64.h:
+/usr/include/bits/wordsize.h:
+/usr/include/bits/timesize.h:
+/usr/include/stdc-predef.h:
+/usr/include/sys/cdefs.h:
+/usr/include/bits/long-double.h:
+/usr/include/gnu/stubs.h:
+/usr/include/gnu/stubs-64.h:
+/usr/lib/clang/19/include/stddef.h:
+/usr/lib/clang/19/include/__stddef_size_t.h:
+/usr/lib/clang/19/include/__stddef_null.h:
+/usr/include/bits/time.h:
+/usr/include/bits/types.h:
+/usr/include/bits/typesizes.h:
+/usr/include/bits/time64.h:
+/usr/include/bits/timex.h:
+/usr/include/bits/types/struct_timeval.h:
+/usr/include/bits/types/clock_t.h:
+/usr/include/bits/types/time_t.h:
+/usr/include/bits/types/struct_tm.h:
+/usr/include/bits/types/struct_timespec.h:
+/usr/include/bits/endian.h:
+/usr/include/bits/endianness.h:
+/usr/include/bits/types/clockid_t.h:
+/usr/include/bits/types/timer_t.h:
+/usr/include/bits/types/struct_itimerspec.h:
+/usr/include/bits/types/locale_t.h:
+/usr/include/bits/types/__locale_t.h:
+/usr/include/sys/time.h:
+/usr/include/sys/select.h:
+/usr/include/bits/select.h:
+/usr/include/bits/types/sigset_t.h:
+/usr/include/bits/types/__sigset_t.h:
+/usr/include/pthread.h:
+/usr/include/sched.h:
+/usr/include/bits/sched.h:
+/usr/include/linux/sched/types.h:
+/usr/include/linux/types.h:
+/usr/include/asm/types.h:
+/usr/include/asm-generic/types.h:
+/usr/include/asm-generic/int-ll64.h:
+/usr/include/asm/bitsperlong.h:
+/usr/include/asm-generic/bitsperlong.h:
+/usr/include/linux/posix_types.h:
+/usr/include/linux/stddef.h:
+/usr/include/asm/posix_types.h:
+/usr/include/asm/posix_types_64.h:
+/usr/include/asm-generic/posix_types.h:
+/usr/include/bits/types/struct_sched_param.h:
+/usr/include/bits/cpu-set.h:
+/usr/include/bits/pthreadtypes.h:
+/usr/include/bits/thread-shared-types.h:
+/usr/include/bits/pthreadtypes-arch.h:
+/usr/include/bits/atomic_wide_counter.h:
+/usr/include/bits/struct_mutex.h:
+/usr/include/bits/struct_rwlock.h:
+/usr/include/bits/setjmp.h:
+/usr/include/bits/types/struct___jmp_buf_tag.h:
+/usr/include/bits/pthread_stack_min-dynamic.h:
+/usr/include/stdlib.h:
+/usr/include/bits/libc-header-start.h:
+/usr/lib/clang/19/include/__stddef_wchar_t.h:
+/usr/include/bits/waitflags.h:
+/usr/include/bits/waitstatus.h:
+/usr/include/bits/floatn.h:
+/usr/include/bits/floatn-common.h:
+/usr/include/sys/types.h:
+/usr/include/bits/stdint-intn.h:
+/usr/include/endian.h:
+/usr/include/bits/byteswap.h:
+/usr/include/bits/uintn-identity.h:
+/usr/include/alloca.h:
+/usr/include/bits/stdlib-float.h:
+/usr/include/signal.h:
+/usr/include/bits/signum-generic.h:
+/usr/include/bits/signum-arch.h:
+/usr/include/bits/types/sig_atomic_t.h:
+/usr/include/bits/types/siginfo_t.h:
+/usr/include/bits/types/__sigval_t.h:
+/usr/include/bits/siginfo-arch.h:
+/usr/include/bits/siginfo-consts.h:
+/usr/include/bits/siginfo-consts-arch.h:
+/usr/include/bits/types/sigval_t.h:
+/usr/include/bits/types/sigevent_t.h:
+/usr/include/bits/sigevent-consts.h:
+/usr/include/bits/sigaction.h:
+/usr/include/bits/sigcontext.h:
+/usr/include/bits/types/stack_t.h:
+/usr/include/sys/ucontext.h:
+/usr/include/bits/sigstack.h:
+/usr/include/bits/sigstksz.h:
+/usr/include/unistd.h:
+/usr/include/bits/posix_opt.h:
+/usr/include/bits/environments.h:
+/usr/include/bits/confname.h:
+/usr/include/bits/getopt_posix.h:
+/usr/include/bits/getopt_core.h:
+/usr/include/bits/unistd_ext.h:
+/usr/include/linux/close_range.h:
+/usr/include/bits/ss_flags.h:
+/usr/include/bits/types/struct_sigstack.h:
+/usr/include/bits/sigthread.h:
+/usr/include/bits/signal_ext.h:
+/usr/include/errno.h:
+/usr/include/bits/errno.h:
+/usr/include/linux/errno.h:
+/usr/include/asm/errno.h:
+/usr/include/asm-generic/errno.h:
+/usr/include/asm-generic/errno-base.h:
+/usr/include/bits/types/error_t.h:

@@ -12,7 +12,7 @@
         "UNICODE",
         "_UNICODE",
         "KEXPORT",
-        "KWAYLAND"
+        "_GLFW_WAYLAND"
       ],
       "compilerPath": "/usr/bin/gcc",
       "cStandard": "${default}",

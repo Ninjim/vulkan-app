@@ -2,8 +2,12 @@
 
 #include "defines.h"
 #define GLFW_INCLUDE_VULKAN
-#include "../include/glfw/include/GLFW/glfw3.h"
+#ifdef _GLFW_WAYLAND
+#include <wayland-client.h>
+#include "xdg-shell-client-protocol.h"
+#endif
 #include "vulkan_utils.h"
+#include <GLFW/glfw3.h>
 
 
 

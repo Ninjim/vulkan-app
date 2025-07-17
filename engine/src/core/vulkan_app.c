@@ -227,7 +227,7 @@ b8 drawFrame(vulkan_context* context, vulkan_swapchain* swapchain){
 
     #define RENDER_SEMAPHORES 1
     VkSemaphore renderFinish[] = {
-        swapchain->renderFinishedSemaphore[context->currentFrame]
+        swapchain->renderFinishedSemaphore[imageIndex] // because we cant wait on fences for presentation, we dont know when presentation is done for which semaphore, so we need to go off of image index to be sure!
     };
     submitInfo.signalSemaphoreCount = RENDER_SEMAPHORES;
     submitInfo.pSignalSemaphores = renderFinish;
@@ -287,7 +287,7 @@ void cleanup(vulkan_context* context){
     vkDestroySemaphore(context->device, context->swapchain.imageAvailableSemaphore[i], context->allocator);
     }
 
-    for(u32 i = 0; i < MAX_FRAMES_IN_FLIGHT; ++i){    
+    for(u32 i = 0; i < context->swapchain.imageCount; ++i){    
     vkDestroySemaphore(context->device, context->swapchain.renderFinishedSemaphore[i], context->allocator);
     }
 
@@ -550,7 +550,7 @@ b8 initVulkan(vulkan_context* context){
 
     // Swapchain semaphores and fences
     context->swapchain.imageAvailableSemaphore = darray_reserve(VkSemaphore, MAX_FRAMES_IN_FLIGHT);
-    context->swapchain.renderFinishedSemaphore = darray_reserve(VkSemaphore, MAX_FRAMES_IN_FLIGHT);
+    context->swapchain.renderFinishedSemaphore = darray_reserve(VkSemaphore, context->swapchain.imageCount); // depending on images I need this many semaphores for the swapchain to work!
     context->swapchain.inFlightFence = darray_reserve(VkFence, MAX_FRAMES_IN_FLIGHT);
 
     if(!create_semaphores(context, MAX_FRAMES_IN_FLIGHT, context->swapchain.imageAvailableSemaphore)){
@@ -558,7 +558,7 @@ b8 initVulkan(vulkan_context* context){
         return false;
     }
 
-    if(!create_semaphores(context, MAX_FRAMES_IN_FLIGHT, context->swapchain.renderFinishedSemaphore)){
+    if(!create_semaphores(context, context->swapchain.imageCount, context->swapchain.renderFinishedSemaphore)){
         ERROR("Could not create render finished semaphores");
         return false;
     }
@@ -917,10 +917,12 @@ b8 isDeviceSuitable(VkPhysicalDevice device){
     VkPhysicalDeviceFeatures deviceFeatures;
     vkGetPhysicalDeviceFeatures(device, &deviceFeatures);
 
-    if(deviceProperties.deviceType != VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU || !deviceFeatures.geometryShader || !deviceFeatures.tessellationShader) {
+    // ignore this for now
+    /*if(deviceProperties.deviceType != VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU || !deviceFeatures.geometryShader || !deviceFeatures.tessellationShader) {
         ERROR("Physical device is not discrete, or does not support geometry/tessellation shaders");
         return false;
-    } 
+    }
+    */
 
     // anisotropic filtering
     if(!deviceFeatures.samplerAnisotropy){

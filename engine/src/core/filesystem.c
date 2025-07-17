@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <sys/stat.h>
+#include <stdlib.h> // ??
 
  b8 filesystem_exists(const char* path){
     struct stat buffer; // i think it throws an error if no buffer given
