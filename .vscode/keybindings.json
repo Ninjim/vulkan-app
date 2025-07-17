@@ -1,0 +1,7 @@
+[
+    {
+        "key": "ctrl+alt+c",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Clean Everything"
+    }
+]
