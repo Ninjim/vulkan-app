@@ -2,7 +2,7 @@
 #include "vulkan_shader_module.h"
 #include "math/math_types.h"
 
-b8 create_graphics_pipeline(vulkan_context* context, const char* vertPath, const char* fragPath, u32 width, u32 height, VkExtent2D extent, VkPipelineLayout* pipelineLayout, VkRenderPass* renderpass, VkPipeline* pipeline){
+b8 create_graphics_pipeline(vulkan_context* context, const char* vertPath, const char* fragPath, u32 width, u32 height, VkExtent2D extent, u32 layout_count, VkDescriptorSetLayout* descriptor_layous, VkPipelineLayout* pipelineLayout, VkRenderPass* renderpass, VkPipeline* pipeline){
     
     // There are copies taken by the pipeline I think of the shader modules
     // so after we create the pipeline, we can delete them
@@ -139,8 +139,8 @@ b8 create_graphics_pipeline(vulkan_context* context, const char* vertPath, const
 
     // TODO: Pipeline layout (for uniforms)
     VkPipelineLayoutCreateInfo pipelineLayoutInfo = {VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO};
-    pipelineLayoutInfo.setLayoutCount = 0;
-    pipelineLayoutInfo.pSetLayouts = 0;
+    pipelineLayoutInfo.setLayoutCount = layout_count;
+    pipelineLayoutInfo.pSetLayouts = descriptor_layous;
     pipelineLayoutInfo.pushConstantRangeCount = 0;
     pipelineLayoutInfo.pPushConstantRanges = 0;
 
@@ -181,7 +181,7 @@ b8 create_graphics_pipeline(vulkan_context* context, const char* vertPath, const
 
 
 
-b8 pipeline_draw(VkCommandBuffer commandbuffer, VkPipeline graphics_pipeline, u32 width, u32 height, VkExtent2D extent, u64 v_count, u64 i_count, u64 v_offset, u64 i_offset, VkBuffer* vertexBuffers, VkDeviceSize* vertexOffsets, VkDeviceSize indexOffset, u32 indices, u32 index_instances, u32 indices_offset,u32 indices_vertex_offsets, u32 indance_instance_offset){
+b8 pipeline_draw(VkCommandBuffer commandbuffer, VkPipeline graphics_pipeline, VkPipelineLayout layout, u32 width, u32 height, VkExtent2D extent, VkDescriptorSet* descriptorsets, u32 descriptorset_count, u64 v_count, u64 i_count, u64 v_offset, u64 i_offset, VkBuffer* vertexBuffers, VkDeviceSize* vertexOffsets, VkDeviceSize indexOffset, u32 indices, u32 index_instances, u32 indices_offset,u32 indices_vertex_offsets, u32 indance_instance_offset){
 
     vkCmdBindPipeline(commandbuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, graphics_pipeline);
 
@@ -206,6 +206,7 @@ b8 pipeline_draw(VkCommandBuffer commandbuffer, VkPipeline graphics_pipeline, u3
 
     // Bind vertex buffers
     vkCmdBindVertexBuffers(commandbuffer, 0, 1, vertexBuffers, vertexOffsets);
+    vkCmdBindDescriptorSets(commandbuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, layout, 0, descriptorset_count, descriptorsets, 0, 0);
 
     if(indices != 0){
         vkCmdBindIndexBuffer(commandbuffer, vertexBuffers[0], indexOffset, VK_INDEX_TYPE_UINT16);

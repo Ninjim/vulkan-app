@@ -8,3 +8,6 @@ b8 create_images(vulkan_context* context, VkImage** images);
 
 // I don't think we need cleanup functions??
 
+
+b8 create_texture_image(vulkan_context* context, const char* file_path, vulkan_image* image);
+

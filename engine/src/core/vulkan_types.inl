@@ -4,8 +4,35 @@
 #define GLFW_INCLUDE_VULKAN
 #include "vulkan_utils.h"
 #include "../include/glfw/glfw3.h"
+#include "math/math_types.h"
+
+#define MAX_FRAMES_IN_FLIGHT 2
 
 
+// UBO
+typedef struct uniform_buffer_object {
+    mat4 model;
+    mat4 view;
+    mat4 proj;
+} ubo;
+
+
+// Descriptors
+typedef struct vulkan_descriptor {
+    VkDescriptorSetLayout layout;
+    VkDescriptorPool pool;
+    VkDescriptorSet* sets;
+} vulkan_descriptor;
+
+
+// Images
+typedef struct vulkan_image {
+    VkImage image;
+    VkDeviceMemory imageMemory;
+    VkDeviceSize size;
+    u32 offsets[4];
+    void* map_ptr;
+} vulkan_image;
 
 // Buffers
 typedef struct vulkan_buffer {
@@ -13,6 +40,7 @@ typedef struct vulkan_buffer {
     VkDeviceMemory bufferMemory;
     VkDeviceSize size;
     u32 offsets[4];
+    void* map_ptr;
 } vulkan_buffer;
 
 
@@ -93,6 +121,7 @@ VkQueue transferQueue;
 // Buffers
 vulkan_buffer vertexIndexBuffer;
 vulkan_buffer vertexIndexBufferStaging;
+vulkan_buffer uniformBuffers[MAX_FRAMES_IN_FLIGHT] ;
 
 // Surface
 VkSurfaceKHR surface;
@@ -103,6 +132,9 @@ vulkan_swapchain swapchain;
 // Command pool / buffers
 vulkan_commands graphics_command_buffer;
 vulkan_commands transfer_command_buffer;
+
+// Descriptors
+vulkan_descriptor ubo_descriptor;
 
 // Frame
 u32 currentFrame;

@@ -28,7 +28,8 @@
     "vulkan_framebuffer.h": "c",
     "vulkan_buffer.h": "c",
     "vulkan_memory.h": "c",
-    "math.h": "c"
+    "math.h": "c",
+    "vulkan_descriptor.h": "c"
   },
   "C_Cpp.intelliSenseEngine": "default",
   "C_Cpp.errorSquiggles": "disabled",

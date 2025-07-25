@@ -483,10 +483,16 @@ KINLINE f32 vec3_dot(vec3 vector_0, vec3 vector_1) {
  * @return The cross product. 
  */
 KINLINE vec3 vec3_cross(vec3 vector_0, vec3 vector_1) {
-    return (vec3){
+    vec3 vec3 = {
         vector_0.y * vector_1.z - vector_0.z * vector_1.y,
         vector_0.z * vector_1.x - vector_0.x * vector_1.z,
         vector_0.x * vector_1.y - vector_0.y * vector_1.x};
+
+        if(vec3.y == -0){
+            vec3.y = 0;
+        }
+
+    return vec3;
 }
 
 /**
@@ -809,7 +815,7 @@ KINLINE mat4 mat4_perspective(f32 fov_radians, f32 aspect_ratio, f32 near_clip, 
     mat4 out_matrix;
     memset(out_matrix.data, 0, sizeof(f32) * 16);
     out_matrix.data[0] = 1.0f / (aspect_ratio * half_tan_fov);
-    out_matrix.data[5] = 1.0f / half_tan_fov;
+    out_matrix.data[5] = (1.0f / half_tan_fov)* -1; 
     out_matrix.data[10] = -((far_clip + near_clip) / (far_clip - near_clip));
     out_matrix.data[11] = -1.0f;
     out_matrix.data[14] = -((2.0f * far_clip * near_clip) / (far_clip - near_clip));
@@ -835,7 +841,8 @@ KINLINE mat4 mat4_look_at(vec3 position, vec3 target, vec3 up) {
     z_axis.z = target.z - position.z;
 
     z_axis = vec3_normalized(z_axis);
-    vec3 x_axis = vec3_normalized(vec3_cross(z_axis, up));
+    vec3 x_axis = vec3_cross(z_axis, up);
+    x_axis = vec3_normalized(x_axis);
     vec3 y_axis = vec3_cross(x_axis, z_axis);
 
     out_matrix.data[0] = x_axis.x;

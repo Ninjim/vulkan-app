@@ -7,10 +7,11 @@
 #include "vulkan_command_buffer.h"
 #include "vulkan_sync_objects.h"
 #include "math/math_types.h"
+#include "math/kmath.h"
 #include "vulkan_buffer.h"
 #include "vulkan_memory.h"
+#include "vulkan_descriptor.h"
 
-#define MAX_FRAMES_IN_FLIGHT 2
 
 static vulkan_context context;
 
@@ -181,12 +182,40 @@ b8 drawFrame(vulkan_context* context, vulkan_swapchain* swapchain){
 
     vkResetFences(context->device, 1, &swapchain->inFlightFence[context->currentFrame]); // reset the fence if we're continuing
 
-    // Vertex buffer and offsets
+    // Pos calculations 
+    static f32 increment = 0.01f;
+    increment = increment + 0.001f;
+    mat4 model = quat_to_mat4(quat_from_axis_angle((vec3){0.0f, 0.0f, 1.0f}, increment * deg_to_rad(90.0f), true));
+    //mat4 translate = mat4_translation((vec3){1.0f, 1.0f, 1.0f});
+    //model = mat4_mul(translate, model);
+    mat4 view = mat4_look_at((vec3){2.0f, 2.0f, 2.0f}, (vec3){0.0f, 0.0f, 0.0f}, (vec3){0.0f, 0.0f, 1.0f});
+    //mat4 view = mat4_identity();
+    mat4 proj = mat4_perspective(deg_to_rad(45.0f), swapchain->extent.width / (float)swapchain->extent.height, 0.01f, 10000.0f);
+    //proj.data[5] *= -1.0f;
+    //mat4 proj = mat4_identity();
+    update_uniform_buffer(context->uniformBuffers[context->currentFrame].map_ptr, model, view, proj);
+
+    // Vertex buffer and offsets and descriptors
+    VkBuffer ubo_buffers[] = {
+        context->uniformBuffers[context->currentFrame].buffer
+    };
+
+    VkDescriptorSet descriptorsets[] = {
+        context->ubo_descriptor.sets[context->currentFrame]
+    };
+
+    u32 ranges[] = {
+        context->uniformBuffers[context->currentFrame].size
+    };
+    update_descriptor_sets_buffers(context, 1, ubo_buffers, descriptorsets, 0, ranges, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER);
+
+    
     VkBuffer buffers[] = {
         context->vertexIndexBuffer.buffer
     };
 
     VkDeviceSize offsets[] = {0};
+
 
     // Recording commands
     reset_command_buffer(context->graphics_command_buffer.commandbuffers[context->currentFrame]);
@@ -195,9 +224,12 @@ b8 drawFrame(vulkan_context* context, vulkan_swapchain* swapchain){
     start_renderpass(context->graphics_command_buffer.commandbuffers[context->currentFrame], swapchain->renderpass, swapchain->swapchainFramebuffers[imageIndex], swapchain->extent);
     pipeline_draw(context->graphics_command_buffer.commandbuffers[context->currentFrame], 
         swapchain->graphicsPipeline,
+        swapchain->pipelineLayout,
         swapchain->extent.width,
         swapchain->extent.height,
         swapchain->extent,
+        descriptorsets,
+        1,
         (context->vertexIndexBufferStaging.size/sizeof(vertex_3d)) , 1, 0, 0,
         buffers,
         offsets,
@@ -342,6 +374,27 @@ void cleanup(vulkan_context* context){
     swapchain_cleanup(context, &context->swapchain);
     TRACE("Vulkan swapchain destroyed");
 
+    // Uniform buffer objects
+    for(u32 i = 0; i < MAX_FRAMES_IN_FLIGHT; ++i){
+        vkDestroyBuffer(context->device, context->uniformBuffers[i].buffer, context->allocator);
+        vkFreeMemory(context->device, context->uniformBuffers[i].bufferMemory, context->allocator);
+        context->uniformBuffers[i].buffer = 0;
+        context->uniformBuffers[i].bufferMemory = 0;
+        context->uniformBuffers[i].map_ptr = 0;
+
+    }
+    TRACE("Destroyed uniform buffer objects")
+
+    // Descriptor layout
+    vkDestroyDescriptorSetLayout(context->device, context->ubo_descriptor.layout, context->allocator);
+    context->ubo_descriptor.layout = 0;
+    TRACE("Destroyed descriptor layouts");
+
+    // Descriptor pool
+    vkDestroyDescriptorPool(context->device, context->ubo_descriptor.pool, context->allocator);
+    context->ubo_descriptor.sets = 0;
+    TRACE("Descriptor pool destroyed");
+
     // Logical device
     vkDestroyDevice(context->device, context->allocator);
     context->device = 0;
@@ -479,7 +532,18 @@ b8 initVulkan(vulkan_context* context){
 
     SUCCESS("Created swapchain renderpass!");
 
+
+    // Swapchain descriptors
+    if(!create_descriptor_layout(context, &context->ubo_descriptor, 0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, 1, VK_SHADER_STAGE_VERTEX_BIT)){
+        ERROR("Could not create swapchain descriptor layout");
+        return false;
+    }
+
+    SUCCESS("Created swapchain descriptor layout");
+
     // Swapchain Pipeline
+    // if we have multiple sets we need to specify multiple layouts here
+    VkDescriptorSetLayout descriptor_layouts[] = {context->ubo_descriptor.layout};
     if(!create_graphics_pipeline(
         context,
         "assets/shaders/Builtin.MaterialShader.vert.spv",
@@ -487,6 +551,8 @@ b8 initVulkan(vulkan_context* context){
         context->swapchain.extent.width,
         context->swapchain.extent.height,
         context->swapchain.extent,
+        (sizeof(descriptor_layouts) / sizeof(VkDescriptorSetLayout)),
+        descriptor_layouts,
         &context->swapchain.pipelineLayout,
         &context->swapchain.renderpass,
         &context->swapchain.graphicsPipeline
@@ -496,6 +562,24 @@ b8 initVulkan(vulkan_context* context){
     }
 
     SUCCESS("Created swapchain graphics pipeline!");
+
+    // Descriptor pool and sets
+    if(!create_descriptor_pool(context, &context->ubo_descriptor, MAX_FRAMES_IN_FLIGHT, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, MAX_FRAMES_IN_FLIGHT)){
+        ERROR("Could not create ubo descriptor pool");
+        return false;
+    }
+
+    VkDescriptorSetLayout layouts[MAX_FRAMES_IN_FLIGHT] = {
+        context->ubo_descriptor.layout,
+        context->ubo_descriptor.layout
+    };
+    context->ubo_descriptor.sets = darray_reserve(VkDescriptorSet, MAX_FRAMES_IN_FLIGHT);
+    if(!create_descriptor_sets(context, &context->ubo_descriptor, MAX_FRAMES_IN_FLIGHT, layouts)){
+        ERROR("Could not create ubo descriptor sets");
+        return false;
+    }
+
+    SUCCESS("Created ubo descriptor pool and sets");
 
     // Swapchain framebuffers
     if(!create_frambuffers(
@@ -591,8 +675,10 @@ b8 initVulkan(vulkan_context* context){
     };
 
     // BEWARE CULLING ORDER!!
+    // THESE ARE CW BECAUSE WE FLIP THE Y-AXIS TO CONFORM WITH VULKAN'S NDC COORDINATES IN THE DRAWFRAME FUNC
+    // WE ARE USING A RIGHT HAND COORDINATE SYSTEM
     u16 indices[] = {
-        0, 2, 1, 0, 3, 2
+        0, 1, 2, 2, 3, 0
     };
     // end TODO:
 
@@ -605,7 +691,7 @@ b8 initVulkan(vulkan_context* context){
         VK_BUFFER_USAGE_VERTEX_BUFFER_BIT | VK_BUFFER_USAGE_INDEX_BUFFER_BIT | VK_BUFFER_USAGE_TRANSFER_DST_BIT,
         vertexIndexBufferSharing,
         VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT,
-        0, family_indices, 2)){
+        family_indices, 2)){
         
         ERROR("Could not create vertex index buffer");
         return false;
@@ -621,7 +707,7 @@ b8 initVulkan(vulkan_context* context){
         VK_BUFFER_USAGE_TRANSFER_SRC_BIT,
         VK_SHARING_MODE_EXCLUSIVE,
         VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT,
-        0, 0, 0)){
+        0, 0)){
         
         ERROR("Could not create staging vertex index buffer");
         return false;
@@ -664,6 +750,21 @@ b8 initVulkan(vulkan_context* context){
     buffer_destroy(context, &context->vertexIndexBufferStaging);
 
     SUCCESS("Copied staging vertex index buffer contents");
+
+    // Uniform buffer
+    for(u32 i = 0; i < MAX_FRAMES_IN_FLIGHT; ++i){
+
+    if(!create_buffer(context, &context->uniformBuffers[i], sizeof(ubo), VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT, VK_SHARING_MODE_EXCLUSIVE, VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT | VK_MEMORY_PROPERTY_HOST_COHERENT_BIT, 0, 0)){
+        ERROR("Failed to create uniform_buffer[%i]", i);
+        return false;
+    }
+
+    // Persistent mapping
+    vkMapMemory(context->device, context->uniformBuffers[i].bufferMemory, 0, context->uniformBuffers[i].size, 0, &context->uniformBuffers[i].map_ptr);
+
+    }
+
+    SUCCESS("Created uniform buffers");
 
     return true;
 }
@@ -918,11 +1019,11 @@ b8 isDeviceSuitable(VkPhysicalDevice device){
     vkGetPhysicalDeviceFeatures(device, &deviceFeatures);
 
     // ignore this for now
-    /*if(deviceProperties.deviceType != VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU || !deviceFeatures.geometryShader || !deviceFeatures.tessellationShader) {
+    if(!deviceFeatures.geometryShader || !deviceFeatures.tessellationShader) {
         ERROR("Physical device is not discrete, or does not support geometry/tessellation shaders");
         return false;
     }
-    */
+    
 
     // anisotropic filtering
     if(!deviceFeatures.samplerAnisotropy){

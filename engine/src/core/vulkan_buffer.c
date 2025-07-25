@@ -3,7 +3,7 @@
 #include "vulkan_command_buffer.h"
 #include "logging.h"
 
-b8 create_buffer(vulkan_context* context, vulkan_buffer* buffer, u64 size, VkBufferUsageFlagBits usage, VkSharingMode sharing_mode, VkMemoryPropertyFlags properties, u64 offset, u32* family_indices, u32 family_count){
+b8 create_buffer(vulkan_context* context, vulkan_buffer* buffer, u64 size, VkBufferUsageFlagBits usage, VkSharingMode sharing_mode, VkMemoryPropertyFlags properties, u32* family_indices, u32 family_count){
 
     VkBufferCreateInfo bufferInfo = {VK_STRUCTURE_TYPE_BUFFER_CREATE_INFO};
     bufferInfo.size = size;
@@ -65,4 +65,17 @@ void buffer_destroy(vulkan_context* context, vulkan_buffer* buffer){
     vkFreeMemory(context->device, buffer->bufferMemory, context->allocator);
     buffer->bufferMemory = 0;
     }
+}
+
+
+
+
+
+
+void update_uniform_buffer(void* map_ptr, mat4 model, mat4 view, mat4 proj){
+    ubo ubo = {};
+    ubo.model = model;
+    ubo.view = view;
+    ubo.proj = proj;
+    memcpy(map_ptr, &ubo, sizeof(ubo));
 }
